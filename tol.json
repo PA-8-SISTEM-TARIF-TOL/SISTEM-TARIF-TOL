@@ -1,0 +1,11 @@
+[
+    {
+        "kode": "T01",
+        "nama": "Tol Cipali",
+        "awal": "Cikampek",
+        "tujuan": "Palimanan",
+        "jarak": 100,
+        "tarif": 1500,
+        "status": "aktif"
+    }
+]
