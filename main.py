@@ -126,6 +126,64 @@ def menuAdmin(username):
     except KeyboardInterrupt:
         print("\n\n💀 Program dihentikan paksa (Ctrl + C)")
 
+
+# ================== MENU USER ==================
+def menuUser(username):
+    while True:
+        akun = load_json(akun_file)
+        saldo = next((a["saldo"] for a in akun if a["username"] == username), 0)
+
+        print(f"\n=== MENU USER ({username}) ===")
+        print(f"Saldo: Rp {saldo}")
+        print("[1] Lihat daftar ruas tol")
+        print("[2] Top up saldo")
+        print("[3] Cek saldo")
+        print("[4] Hitung & bayar tarif tol")
+        print("[5] Lihat riwayat transaksi")
+        print("[0] Logout")
+
+        pilih = input("Pilih menu >>> ")
+
+        # 1. Lihat daftar tol
+        if pilih == "1":
+            data = load_json(tol_file)
+            table = PrettyTable(["No", "Kode", "Nama", "Awal", "Tujuan", "Jarak", "Tarif/km", "Status"])
+            for i, t in enumerate(data, start=1):
+                table.add_row([i, t["kode"], t["nama"], t["awal"], t["tujuan"], t["jarak"], t["tarif"], t["status"]])
+            print(table)
+
+        # 2. Top up saldo
+        elif pilih == "2":
+            nominal = int(input("Masukkan nominal top up: "))
+            for a in akun:
+                if a["username"] == username:
+                    a["saldo"] += nominal
+            save_json(akun_file, akun)
+            print("Top up berhasil!")
+
+        # 3. Cek saldo
+        elif pilih == "3":
+            print(f"Saldo Anda: Rp {saldo}")
+
+        # 4. Hitung & bayar tol
+        #elif pilih == "4":
+
+        # 5. Lihat riwayat transaksi
+        elif pilih == "5":
+            transaksi = load_json(transaksi_file)
+            user_trans = [t for t in transaksi if t["user"] == username]
+            table = PrettyTable(["No", "Tol", "Golongan", "Jarak", "Total"])
+            for i, t in enumerate(user_trans, start=1):
+                table.add_row([i, t["tol"], t["golongan"], t["jarak"], t["total"]])
+            print(table)
+
+        elif pilih == "0":
+            print("Logout berhasil.\n")
+            break
+        else:
+            print("Pilihan tidak valid!")
+
+
 # === LOGIN SYSTEM ===
 def login_system():
     try:
@@ -149,25 +207,18 @@ def login_system():
             if pilihan == 1:
                 username = input("Masukkan username: ")
                 password = input("Masukkan password: ")
-
                 akun = load_json(akun_file)
-                ditemukan = False
+                found = next((a for a in akun if a["username"] == username and a["password"] == password), None)
 
-                for a in akun:
-                    if a["username"] == username and a["password"] == password:
-                        print(f"\nHalo {username}, Anda login sebagai {a['role'].upper()}.")
-                        ditemukan = True
-
-                        if a["role"] == "admin":
-                            menuAdmin(username)
-                        else:
-                            print("Role user belum memiliki menu.")
-                        break
-
-                if not ditemukan:
+                if found:
+                    print(f"\nHalo {username}, Anda login sebagai {found['role'].upper()}.")
+                    if found["role"] == "admin":
+                        menuAdmin(username)
+                    else:
+                        menuUser(username)
+                else:
                     print("Username atau password salah!")
-
-            # --- REGISTRASI AKUN ---
+            
             elif pilihan == 2:
                 akun = load_json(akun_file)
                 username_baru = input("Buat username baru: ")
@@ -182,7 +233,8 @@ def login_system():
                 akun.append({
                     "username": username_baru,
                     "password": password_baru,
-                    "role": role_baru
+                    "role": role_baru,
+                    "saldo": 0
                 })
 
                 save_json(akun_file, akun)
