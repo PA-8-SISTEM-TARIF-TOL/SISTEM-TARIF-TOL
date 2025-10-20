@@ -6,19 +6,15 @@
         "saldo": 0
     },
     {
-        "username": "user1",
-        "password": "1234",
-        "role": "user",
-        "saldo": 100000
-    },
-    {
-        "username": "test",
-        "password": "test",
-        "role": "user"
-    },
-    {
         "username": "n00b",
         "password": "0000",
-        "role": "user"
+        "role": "user",
+        "saldo": 999999999
+    },
+    {
+        "username": "Harits",
+        "password": "voyage12",
+        "role": "user",
+        "saldo": 30000
     }
 ]
