@@ -2,9 +2,9 @@ import json
 import os
 from prettytable import PrettyTable
 
-akun_file = 'P.DDP/PA/akun.json'
-tol_file = 'P.DDP/PA/tol.json'
-transaksi_file = 'P.DDP/PA/transaksi.json'
+akun_file = 'akun.json'
+tol_file = 'tol.json'
+transaksi_file = 'transaksi.json'
 
 # === JSON HELPERS ===
 def load_json(file):
@@ -297,3 +297,4 @@ def login_system():
 # === MAIN PROGRAM ===
 if __name__ == "__main__":
     login_system()
+
