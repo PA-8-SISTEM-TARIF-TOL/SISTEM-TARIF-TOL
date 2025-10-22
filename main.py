@@ -112,7 +112,13 @@ def menuAdmin(username):
                     print("Mohon inputkan value dengan benar")
                 
             # 5. Lihat Transaksi
-            #elif adminInput == 5:
+            elif adminInput == "5":
+                transaksi = load_json(transaksi_file)
+                user_trans = [t for t in transaksi if t["user"] == username]
+                table = PrettyTable(["No", "Tol", "Golongan", "Jarak", "Total"])
+                for i, t in enumerate(user_trans, start=1):
+                    table.add_row([i, t["tol"], t["golongan"], t["jarak"], t["total"]])
+                print(table)
                 
 
             # 0. Logout
@@ -166,7 +172,44 @@ def menuUser(username):
             print(f"Saldo Anda: Rp {saldo}")
 
         # 4. Hitung & bayar tol
-        #elif pilih == "4":
+        elif pilih == "4":
+            data = load_json(tol_file)
+            table = PrettyTable(["No", "Kode", "Nama", "Tarif/km"])
+            for i, t in enumerate(data, start=1):
+                table.add_row([i, t["kode"], t["nama"], t["tarif"]])
+            print(table)
+
+            no = int(input("Masukkan nomor tol: ")) - 1
+            if 0 <= no < len(data):
+                jarak = float(input("Masukkan jarak (km): "))
+                print("Golongan kendaraan:")
+                print("[1] Roda 4 (x1)")
+                print("[2] Roda 6 (x1.5)")
+                print("[3] Roda 8 (x2)")
+                print("[4] >8 (x2.5)")
+                gol = int(input("Pilih golongan: "))
+                faktor = [1, 1.5, 2, 2.5][gol - 1]
+                total = jarak * data[no]["tarif"] * faktor
+
+                if saldo >= total:
+                    for a in akun:
+                        if a["username"] == username:
+                            a["saldo"] -= total
+                    save_json(akun_file, akun)
+                    transaksi = load_json(transaksi_file)
+                    transaksi.append({
+                        "user": username,
+                        "tol": data[no]["nama"],
+                        "golongan": gol,
+                        "jarak": jarak,
+                        "total": total
+                    })
+                    save_json(transaksi_file, transaksi)
+                    print(f"Pembayaran berhasil! Total: Rp {total:,.0f}")
+                else:
+                    print("Saldo tidak cukup!")
+            else:
+                print("Nomor tidak valid!")
 
         # 5. Lihat riwayat transaksi
         elif pilih == "5":
