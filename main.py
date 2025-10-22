@@ -26,7 +26,7 @@ def menuAdmin(username):
             print("[2] Tambah ruas jalan tol")
             print("[3] Update ruas jalan tol")
             print("[4] Hapus ruas jalan tol")
-            #print("[5] Lihat transaksi user")
+            print("[5] Lihat transaksi user")
             print("[0] Logout")
 
             adminInput = input("Pilih menu >>> ")
@@ -171,45 +171,69 @@ def menuUser(username):
         elif pilih == "3":
             print(f"Saldo Anda: Rp {saldo}")
 
-        # 4. Hitung & bayar tol
+                # 4. Hitung & bayar tol
         elif pilih == "4":
             data = load_json(tol_file)
-            table = PrettyTable(["No", "Kode", "Nama", "Tarif/km"])
+            table = PrettyTable(["No", "Kode", "Nama", "Awal", "Tujuan", "Jarak", "Tarif/km", "Status"])
             for i, t in enumerate(data, start=1):
-                table.add_row([i, t["kode"], t["nama"], t["tarif"]])
+                table.add_row([i, t["kode"], t["nama"], t["awal"], t["tujuan"], t["jarak"], t["tarif"], t["status"]])
             print(table)
 
-            no = int(input("Masukkan nomor tol: ")) - 1
-            if 0 <= no < len(data):
-                jarak = float(input("Masukkan jarak (km): "))
-                print("Golongan kendaraan:")
-                print("[1] Roda 4 (x1)")
-                print("[2] Roda 6 (x1.5)")
-                print("[3] Roda 8 (x2)")
-                print("[4] >8 (x2.5)")
+            try:
+                no = int(input("Masukkan nomor tol: ")) - 1
+            except:
+                print("Input harus angka!")
+                continue
+
+            if not (0 <= no < len(data)):
+                print("Nomor tidak valid!")
+                continue
+
+            tol = data[no]
+
+            if tol["status"].lower() == "tutup":
+                print("Maaf, tol ini sedang tidak tersedia (tutup)")
+                continue
+
+            jarak = tol["jarak"]
+
+            print("Golongan kendaraan:")
+            print("[1] Roda 4 (x1)")
+            print("[2] Roda 6 (x1.5)")
+            print("[3] Roda 8 (x2)")
+            print("[4] Roda >8 (x2.5)")
+
+            try:
                 gol = int(input("Pilih golongan: "))
                 faktor = [1, 1.5, 2, 2.5][gol - 1]
-                total = jarak * data[no]["tarif"] * faktor
+            except:
+                print("Input golongan tidak valid!")
+                continue
 
-                if saldo >= total:
-                    for a in akun:
-                        if a["username"] == username:
-                            a["saldo"] -= total
-                    save_json(akun_file, akun)
-                    transaksi = load_json(transaksi_file)
-                    transaksi.append({
-                        "user": username,
-                        "tol": data[no]["nama"],
-                        "golongan": gol,
-                        "jarak": jarak,
-                        "total": total
-                    })
-                    save_json(transaksi_file, transaksi)
-                    print(f"Pembayaran berhasil! Total: Rp {total:,.0f}")
-                else:
-                    print("Saldo tidak cukup!")
+            total = jarak * tol["tarif"] * faktor
+
+            if saldo >= total:
+                # Kurangi saldo
+                for a in akun:
+                    if a["username"] == username:
+                        a["saldo"] -= total
+                save_json(akun_file, akun)
+
+                # Simpan transaksi
+                transaksi = load_json(transaksi_file)
+                transaksi.append({
+                    "user": username,
+                    "tol": tol["nama"],
+                    "golongan": gol,
+                    "jarak": jarak,
+                    "total": total
+                })
+                save_json(transaksi_file, transaksi)
+
+                print(f"Pembayaran berhasil! Total: Rp {total:,.0f}")
             else:
-                print("Nomor tidak valid!")
+                print("Saldo tidak cukup!")
+
 
         # 5. Lihat riwayat transaksi
         elif pilih == "5":
@@ -294,7 +318,42 @@ def login_system():
     except KeyboardInterrupt:
         print("\n\n💀 Program dihentikan paksa (Ctrl + C)")
 
+# === Startup ===
+def start():
+    while True:
+        try:
+            print("============================================")
+            print("[     _____  ______ _______ ____  _         ")
+            print("[    |  __ \\|  ____|__   __/ __ \\| |        ")
+            print("[    | |  | | |__     | | | |  | | |        ")
+            print("[    | |  | |  __|    | | | |  | | |        ")
+            print("[    | |__| | |____   | | | |__| | |____    ")
+            print("[    |_____/|______|  |_|  \\____/|______|   ")
+            print("============================================")
+            print("Dashboard E-Toll Transaksi Otomatis Langsung")
+            print("============================================")
+            print("[1] Mulai Program")
+            print("[2] Tutup Program")
+
+            option = int(input(">>> "))
+
+            if option == 1:
+                login_system()
+            elif option == 2:
+                print("Program ditutup")
+                exit()
+            else:
+                print("Pilihan tidak valid! Coba lagi\n")
+
+        except KeyboardInterrupt:
+            print("\nKeyboardInterrupt terdeteksi. Kembali ke menu awal\n")
+            continue
+        
+        except ValueError:
+            print("Integer tidak terdeteksi! Coba lagi\n")
+
+
 # === MAIN PROGRAM ===
 if __name__ == "__main__":
-    login_system()
+    start()
 
