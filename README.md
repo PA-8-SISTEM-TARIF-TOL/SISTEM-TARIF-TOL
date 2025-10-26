@@ -1,5 +1,5 @@
 # 🚗 SISTEM TARIF TOL  
-
+https://github.com/PA-8-SISTEM-TARIF-TOL/SISTEM-TARIF-TOL/edit/main/README.md
 👥 **Anggota Kelompok 8 DDP:**  
 - Harits (2509116048)  
 - Ahmad Fajar Novia (2509116041)  
@@ -630,7 +630,7 @@ if __name__ == "__main__":
    pip install pwinput
    pip install prettytable
    ```
-4. Download repository
+4. Download file repository
 5. Masukan "main.py", "akun.json", "tol.json", "transaksi.json" dalam satu folder
 6. Buka folder tersebut di aplikasi editor kode
 7. Jalankan kode
