@@ -681,6 +681,15 @@ jika anda ingin membayar tol yang sudah anda lewati, dengan cara ini :
 
 ---
 ## 5️⃣ Menu 5 Sebagai user
+jika anda ingin melihat hasil transaksi, dengan cara ini :
+- input angka 5 pada tampilan menu user
+- menampilkan hasil transaksi dari akun anda
+- mulai dari nama user, nama tol, golongan, jarak dan total harga
+- kemudian lansung kembali ke menu user
+
+---
+
+---![WhatsApp Image 2025-10-26 at 22 02 27](https://github.com/user-attachments/assets/8679d210-369b-44ee-84fd-42800399846d)
 
 ---
 ## 6️⃣ Menu 6 Sebagai user
@@ -690,6 +699,7 @@ jika anda ingin keluar dari tampilan user anda, dengan cara ini :
 - dan akan menampilkan "Log out berhasil."
 - kembali ke menu DETOL
 ---
+
 <img width="638" height="552" alt="Screenshot 2025-10-26 201019" src="https://github.com/user-attachments/assets/c6bd84e7-a70b-4956-81d4-fa3097d94afd" />
 
 ---
