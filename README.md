@@ -338,7 +338,7 @@ def menuAdmin(username):
 
             # 0. Logout
             elif adminInput == 6:
-                print("Logout admin...\n")
+                print("Log out admin...\n")
                 break
 
             else:
@@ -502,7 +502,7 @@ def menuUser(username):
                 print(table)
 
             elif pilih == 6:
-                print("Log out berhasil.\n")
+                print("Log out user\n")
                 break
 
             else:
