@@ -485,11 +485,14 @@ def login_system():
                 print("Pilihan tidak tersedia")
 
         except KeyboardInterrupt:
-            print("\n💀 Program dihentikan paksa")
+            print("\nProgram dihentikan paksa")
+            break
         except EOFError:
             print("\nInput tidak diterima")
+            continue
         except ValueError:
             print("\nInput harus berupa angka")
+            continue
 
 # === Startup ===
 def start():
