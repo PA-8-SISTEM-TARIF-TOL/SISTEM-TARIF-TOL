@@ -1,6 +1,6 @@
 # 🚗 SISTEM TARIF TOL  
 
-👥 **Anggota Kelompok:**  
+👥 **Anggota Kelompok 8 DDP:**  
 - Harits (2509116048)  
 - Ahmad Fajar Novia (2509116041)  
 - Akhmad Rafliansyah (2509116045)  
@@ -47,7 +47,7 @@ Program dalam sistem tarif tol ini menggunakan berbagai konsep pemrograman, di a
 - **Error Handling**  
 
 ---
-# FLOWCHART SISTEM TARIF TOL
+# 🗒️FLOWCHART SISTEM TARIF TOL
 
 # Menu login
 
@@ -107,7 +107,7 @@ Program dalam sistem tarif tol ini menggunakan berbagai konsep pemrograman, di a
 - **Keluar**  
 
 ---
-# CODINGAN
+# 👨‍💻CODINGAN
 
 ```python
 import json
@@ -622,7 +622,7 @@ def login_system():
 if __name__ == "__main__":
     login_system()
 ```
-# OUTPUT
+# 📤 OUTPUT
 
 ## 👥 Regist Akun dan Login sebagai user
 => jika anda belum mempunyai akun DETOL <br>
@@ -779,3 +779,18 @@ jika admin ingin keluar dari tampilan admin, dengan cara ini :
 ---
 <img width="659" height="538" alt="image" src="https://github.com/user-attachments/assets/7fbc5cca-8b52-4048-9abb-d2dcb20c8b1b" />
 
+---
+## 🐞 Error Handling
+## 📚 Kesimpulan
+---
+
+Secara keseluruhan, program pembayaran tol berbasis Python yang saya buat ini berjalan dengan baik dan membantu pengguna melakukan transaksi e-toll secara lebih praktis. Fitur seperti cek saldo, top up, simulasi biaya sesuai golongan kendaraan, serta riwayat transaksi yang otomatis tersimpan dalam JSON membuat prosesnya lebih jelas dan tertata. Untuk Admin, tersedia pengelolaan data ruas tol lewat fitur CRUD serta pengecekan riwayat transaksi, sehingga pendataan menjadi lebih rapi. Dalam pengembangannya, saya menggunakan percabangan, perulangan, error handling, function, PrettyTable, dan keamanan password. Dengan semua fitur tersebut, program ini bisa menjadi simulasi layanan tol digital yang cukup efisien dan mudah dipahami.
+
+---
+<div align="center"> 
+  
+  ## 🙏TERIMA KASIH🤝 <br>
+  
+  Kami mengucapkan terima kasih kepada Asisten Laboratorium Konsultan dan Asisten Laboratorium yang telah memberikan arahan serta bimbingan selama proses pembuatan program ini.  Semoga project ini dapat bermanfaat dan menjadi pengalaman pembelajaran yang berharga.
+
+</div>
