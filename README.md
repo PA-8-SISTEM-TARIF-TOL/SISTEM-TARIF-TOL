@@ -624,11 +624,15 @@ if __name__ == "__main__":
 ```
 # ▶️ CARA MENJALANKAN
 1. Siapkan Python 3.8+
-2. Install dependensi
+2. Buka aplikasi editor kode
+3. Install dependensi di terminal
    ```
    pip install pwinput
    pip install prettytable
    ```
+4. Masukan "main.py", "akun.json", "tol.json", "transaksi.json" dalam satu folder
+5. Buka folder tersebut di aplikasi editor kode
+6. Jalankan kode
 
 # 📤 OUTPUT
 
