@@ -624,7 +624,7 @@ if __name__ == "__main__":
 ```
 # OUTPUT
 
-## 1️⃣ Regist Akun dan Login sebagai user
+## 👥 Regist Akun dan Login sebagai user
 => jika anda belum mempunyai akun DETOL <br>
 => Pilih menu 2 untuk melakukan regist akun terlebih dahulu <br>
 => buat username baru<br>
@@ -647,7 +647,7 @@ jika anda ingin melihat kemana tujuan anda pada tol anda bisa mengikuti cara ini
 <img width="716" height="598" alt="image" src="https://github.com/user-attachments/assets/5941400c-a0d7-46f1-9aa1-c959441d9629" />
 
 ---
-## 1️⃣ Menu 2 Sebagai user
+## 2️⃣ Menu 2 Sebagai user
 jika anda tidak mempunyai saldo e toll anda bisa top up dengan cara ini
 - input angka 2 pada tampilan menu user 
 - menampilkan halaman top up
@@ -659,7 +659,7 @@ jika anda tidak mempunyai saldo e toll anda bisa top up dengan cara ini
 <img width="657" height="857" alt="image" src="https://github.com/user-attachments/assets/a8c58908-a605-47dd-810f-70f39b87ed20" />
 
 ---
-## 1️⃣ Menu 3 Sebagai user
+## 3️⃣ Menu 3 Sebagai user
 jika anda lupa dengan saldo anda, anda bisa melihatnya denngan cara ini
 - input angka 3 pada tampilan menu user
 - kemudian sistem akan menampilkan saldo anda yang tersimpan di akun.json
@@ -668,7 +668,7 @@ jika anda lupa dengan saldo anda, anda bisa melihatnya denngan cara ini
   <img width="313" height="194" alt="image" src="https://github.com/user-attachments/assets/8b8ef3f8-36c2-4e62-8c15-bc9506452da8" />
 
 ---
-## 1️⃣ Menu 4 Sebagai user
+## 4️⃣ Menu 4 Sebagai user
 jika anda ingin membayar tol yang sudah anda lewati, dengan cara ini :
 - input angka 4 pada tampilan menu user
 - sistem akan menampilkan daftar ruas jalan tol
@@ -680,10 +680,10 @@ jika anda ingin membayar tol yang sudah anda lewati, dengan cara ini :
 - jika saldo cukup maka akan "Pembayaran berhasil! Total: Rp *****"
 
 ---
-## 1️⃣ Menu 5 Sebagai user
+## 5️⃣ Menu 5 Sebagai user
 
 ---
-## 1️⃣ Menu 6 Sebagai user
+## 6️⃣ Menu 6 Sebagai user
 jika anda ingin keluar dari tampilan user anda, dengan cara ini :
 - input angka 6 pada tampilan menu user
 - sistem akan meng log out akun anda
@@ -693,7 +693,7 @@ jika anda ingin keluar dari tampilan user anda, dengan cara ini :
 <img width="638" height="552" alt="Screenshot 2025-10-26 201019" src="https://github.com/user-attachments/assets/c6bd84e7-a70b-4956-81d4-fa3097d94afd" />
 
 ---
-## 1️⃣ Login sebagai admin
+## 🧑‍💼 Login sebagai admin
 - input angka 1 pada tampilan menu DETOL
 - masukkan username "admin1"
 - masukkan password "1234"
@@ -712,7 +712,7 @@ jika admin ingin melihat semua daftar jalan tol, dengan cara ini :
 <img width="883" height="469" alt="image" src="https://github.com/user-attachments/assets/896e7807-b62c-4c97-ae8e-c25baeecbb6b" />
 
 ---
-## 1️⃣ menu 2 sebagai admin
+## 2️⃣ menu 2 sebagai admin
 jika admin ingin menambahkan ruas jalan tol baru, dengan cara ini :
 - input angka 2 pada tampilan menu admin
 - sistem akan menampilkan seluruh ruas jalan tol
@@ -731,7 +731,7 @@ jika admin ingin menambahkan ruas jalan tol baru, dengan cara ini :
 <img width="861" height="519" alt="image" src="https://github.com/user-attachments/assets/15dab8c9-7f14-4eea-b23a-f91fda749acf" />
 
 ---
-## 1️⃣ menu 3 sebagai admin
+## 3️⃣ menu 3 sebagai admin
 jika admin ingin mengubah ruas jalan tol yang sudah ada, dengan cara ini :
 - input angka 3 pada tampilan menu admin
 - sistem akan menampilkan seluruh ruas jalan tol
@@ -748,7 +748,7 @@ jika admin ingin mengubah ruas jalan tol yang sudah ada, dengan cara ini :
 <img width="790" height="705" alt="image" src="https://github.com/user-attachments/assets/2aac53bb-fc5c-42eb-9cf1-517f6406a8e3" />
 
 ---
-## 1️⃣ menu 4 sebagai admin
+## 4️⃣ menu 4 sebagai admin
 jika admin ingin menghapus salah satu ruas jalan tol, dengan cara ini :
 - input angka 4 pada tampilan menu admin
 - sistem akan menampilkan no,kode dan nama jalan tol yang bisa dihapus
@@ -761,4 +761,21 @@ jika admin ingin menghapus salah satu ruas jalan tol, dengan cara ini :
 <img width="530" height="696" alt="image" src="https://github.com/user-attachments/assets/a8174b75-cccf-4c00-8032-e72e6ef0ee26" />
 
 ---
-## 1️⃣ menu 4 sebagai admin
+## 5️⃣ menu 5 sebagai admin
+jika admin ingin melihat seluruh riwayat transaksi dari seluruh user yang sudah melakukan pembayaran, dengan cara ini :
+- input angka 5 pada tampilan menu admin
+- sistem akan menampilkan data transaksi dari seluruh user
+---
+
+<img width="725" height="353" alt="image" src="https://github.com/user-attachments/assets/fd8d8846-3072-4d7a-8f79-fe74964899f5" />
+
+---
+## 6️⃣ menu 6 sebagai admin
+jika admin ingin keluar dari tampilan admin, dengan cara ini :
+- input angka 6 pada tampilan menu admin
+- sistem akan meng log out akun anda
+- kembali ke menu DETOL
+
+---
+<img width="659" height="538" alt="image" src="https://github.com/user-attachments/assets/7fbc5cca-8b52-4048-9abb-d2dcb20c8b1b" />
+
