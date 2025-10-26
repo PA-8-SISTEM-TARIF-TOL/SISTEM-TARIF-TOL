@@ -224,7 +224,7 @@ def menuAdmin(username):
 
                 print(table)
 
-            # 0. Logout
+            # 6. Logout
             elif adminInput == 6:
                 print("Logout admin...\n")
                 break
@@ -389,6 +389,11 @@ def menuUser(username):
                     table.add_row([i, t["user"], t["tol"], t["golongan"], t["jarak"], t["total"]])
 
                 print(table)
+                
+            # 6. Logout
+            elif pilih == 6:
+                print("Logout user...\n")
+                break
 
                 
         except KeyboardInterrupt:
