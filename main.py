@@ -442,7 +442,7 @@ def login_system():
                         print(f"Username atau password salah! Percobaan ke {attempts}/3")
 
                 if attempts == 3:
-                    print("Terlalu banyak percobaan. Kembali ke menu awal.")
+                    print("Terlalu banyak percobaan salah. Program dihentikan")
                     break
 
 
@@ -498,5 +498,3 @@ def login_system():
 # === MAIN PROGRAM ===
 if __name__ == "__main__":
     login_system()
-
-
