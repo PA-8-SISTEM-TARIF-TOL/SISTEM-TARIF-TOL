@@ -1,36 +1,50 @@
-# SISTEM-TARIF-TOL
-- Harits 2509116048 | - Ahmad Fajar Novia 2509116041 | - Akhmad Rafliansyah 2509116045
+# 🚗 SISTEM TARIF TOL  
 
+👥 **Anggota Kelompok:**  
+- Harits (2509116048)  
+- Ahmad Fajar Novia (2509116041)  
+- Akhmad Rafliansyah (2509116045)  
 
-Sistem tarif tol ini merupakan sistem yang mengelola data pada ruas jalan tol , menggunakan PrettyTable untuk tampilan tabel yang rapi menggunakan pwinput dan  JSON untuk penyimpanan data.
-Sistem ini memiliki dua peran utama, yaitu Admin dan User, dengan fungsi dan hak akses yang berbeda.
-Menu Admin
-1. Melihat ruas jalan tol
-2. menambahkan ruas jalan tol
-3. update ruas jalan tol
-4. hapus ruas jalan tol
-5. lihat transaksi user
-6. logout
+---
 
-Menu user
-1. lihat daftar ruas jalan tol
-2. top up saldo
-3. cek saldo
-4. hitung & bayar tarif tol
-5. lihat riwayat transaksi
-6. logout
+## 📋 Deskripsi  
+  Sistem tarif tol adalah program berbasis Python yang berfungsi untuk mengelola data ruas jalan tol serta menghitung biaya perjalanan secara otomatis berdasarkan jarak tempuh dan golongan kendaraan.
+Sistem ini dibuat untuk memudahkan pengguna dalam melakukan pembayaran tol, sekaligus membantu admin dalam pengelolaan data jalan tol, tarif, dan riwayat transaksi.
+Program ini memanfaatkan PrettyTable untuk menampilkan data dalam bentuk tabel yang terstruktur, pwinput untuk menjaga kerahasiaan input password, serta JSON sebagai media penyimpanan data.
 
-Program yang ada pada sistem tarif tol
-- Tipe data
-- percabangan
-- Perulangan
-- function
-- CRUD
-- JSON
-- Prettytable
-- pwinput
-- Errorhandling
+---
 
+## 🧑‍💼 Menu Admin  
+1. Melihat daftar ruas jalan tol  
+2. Menambahkan ruas jalan tol  
+3. Update ruas jalan tol  
+4. Hapus ruas jalan tol  
+5. Lihat transaksi user  
+6. Logout  
+
+---
+
+## 👥 Menu User  
+1. Lihat daftar ruas jalan tol  
+2. Top up saldo  
+3. Cek saldo  
+4. Hitung & bayar tarif tol  
+5. Lihat riwayat transaksi  
+6. Logout  
+
+---
+
+## ⚙️ Fitur dan Konsep Program  
+Program dalam sistem tarif tol ini menggunakan berbagai konsep pemrograman, di antaranya:  
+- **Tipe Data**  
+- **Percabangan (if-else)**  
+- **Perulangan (looping)**  
+- **Function**  
+- **CRUD (Create, Read, Update, Delete)**  
+- **JSON**   
+- **PrettyTable**  
+- **pwinput**   
+- **Error Handling**  
 
 ---
 # FLOWCHART SISTEM TARIF TOL
@@ -52,13 +66,10 @@ Program yang ada pada sistem tarif tol
 ## 🧭 Penjelasan Flowchart Sistem Tol  
 
 ### 1. Flowchart Login & Registrasi  
-Flowchart ini menjelaskan proses awal ketika program dijalankan.  
-Pengguna akan masuk ke **menu login** yang berisi tiga pilihan:  
+
 - **Login** → pengguna memasukkan username dan password untuk masuk.  
 - **Registrasi** → pengguna membuat akun baru dengan mengisi username, password, dan konfirmasi password. Data disimpan ke file `akun.json`.  
-- **Keluar** → menutup program.  
-
-Jika username dan password cocok, pengguna diarahkan ke menu sesuai perannya (**Admin** atau **User**).  
+- **Keluar** → menutup program.   
 
 ---
 
