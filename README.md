@@ -100,8 +100,8 @@ Program dalam sistem tarif tol ini menggunakan berbagai konsep pemrograman, di a
 
 ### 4. Flowchart Menu Admin  
 - **Melihat daftar ruas jalan tol** lengkap dengan informasi kode, nama, kota asal-tujuan, jarak, tarif, dan status.  
-- **Menambah data ruas jalan tol baru** (dengan validasi agar kode tidak duplikat).  
-- **Menghapus data jalan tol** berdasarkan nomor.  
+- **Menambah data ruas jalan tol baru** (kode tidak boleh sama).  
+- **Menghapus data jalan tol** (berdasarkan nomor data).  
 - **Memperbarui data jalan tol** (mengubah nama, kota, jarak, tarif, atau status).  
 - **Melihat transaksi user** yang tersimpan di `transaksi.json`.
 - **Keluar**  
