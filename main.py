@@ -226,7 +226,7 @@ def menuAdmin(username):
 
             # 6. Logout
             elif adminInput == 6:
-                print("Logout admin...\n")
+                print("Log out admin...\n")
                 break
 
             else:
@@ -392,7 +392,7 @@ def menuUser(username):
                 
             # 6. Logout
             elif pilih == 6:
-                print("Logout user...\n")
+                print("Log out user...\n")
                 break
 
                 
