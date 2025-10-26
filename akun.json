@@ -9,12 +9,12 @@
         "username": "n00b",
         "password": "0000",
         "role": "user",
-        "saldo": 999999999
+        "saldo": 1e+52
     },
     {
         "username": "Harits",
-        "password": "voyage12",
+        "password": "harits",
         "role": "user",
-        "saldo": 30000
+        "saldo": 100000
     }
 ]
