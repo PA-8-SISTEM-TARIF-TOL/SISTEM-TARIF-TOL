@@ -1,20 +1,119 @@
 [
     {
-        "kode": "T01",
-        "nama": "Tol Cipali",
-        "awal": "Cikampek",
-        "tujuan": "Palimanan",
-        "jarak": 100,
+        "kode": "T03",
+        "nama": "Tol Jagorawi",
+        "awal": "Jakarta",
+        "tujuan": "Bogor",
+        "jarak": 45,
+        "tarif": 2000,
+        "status": "aktif"
+    },
+    {
+        "kode": "T04",
+        "nama": "Tol Cipularang",
+        "awal": "Cipularang",
+        "tujuan": "Bandung",
+        "jarak": 60,
+        "tarif": 1800,
+        "status": "aktif"
+    },
+    {
+        "kode": "T05",
+        "nama": "Tol Semarang Solo",
+        "awal": "Semarang",
+        "tujuan": "Solo",
+        "jarak": 72,
+        "tarif": 1600,
+        "status": "aktif"
+    },
+    {
+        "kode": "T06",
+        "nama": "Tol Bali Mandara",
+        "awal": "Nusa Dua",
+        "tujuan": "Benoa",
+        "jarak": 12,
+        "tarif": 2200,
+        "status": "aktif"
+    },
+    {
+        "kode": "T07",
+        "nama": "Tol Surabaya Mojokerto",
+        "awal": "Surabaya",
+        "tujuan": "Mojokerto",
+        "jarak": 36,
+        "tarif": 1700,
+        "status": "aktif"
+    },
+    {
+        "kode": "T08",
+        "nama": "Tol Palikanci",
+        "awal": "Palimanan",
+        "tujuan": "Kanci",
+        "jarak": 26,
         "tarif": 1500,
         "status": "aktif"
-    }
+    },
     {
-        "kode": "T02",
-        "nama": "Tol citampi",
-        "awal": "samarinda",
-        "tujuan": "jakarta",
-        "jarak": 1500,
-        "tarif": 1000,
+        "kode": "T09",
+        "nama": "Tol Medan Binjai",
+        "awal": "Medan",
+        "tujuan": "Binjai",
+        "jarak": 17,
+        "tarif": 1400,
+        "status": "aktif"
+    },
+    {
+        "kode": "T10",
+        "nama": "Tol Cibitung Cilincing",
+        "awal": "Cibitung",
+        "tujuan": "Cilincing",
+        "jarak": 34,
+        "tarif": 1900,
+        "status": "aktif"
+    },
+    {
+        "kode": "T11",
+        "nama": "Tol Depok Antasari",
+        "awal": "Depok",
+        "tujuan": "Antasari",
+        "jarak": 21,
+        "tarif": 2100,
+        "status": "aktif"
+    },
+    {
+        "kode": "T12",
+        "nama": "Tol Becakayu",
+        "awal": "Bekasi",
+        "tujuan": "Cawang",
+        "jarak": 16,
+        "tarif": 1600,
+        "status": "tutup"
+    },
+    {
+        "kode": "T13",
+        "nama": "Tol Kunciran Serpong",
+        "awal": "Kunciran",
+        "tujuan": "Serpong",
+        "jarak": 12,
+        "tarif": 1500,
+        "status": "tutup"
+    },
+    {
+        "kode": "T14",
+        "nama": "Tol Cileunyi Sumedang",
+        "awal": "Cileunyi",
+        "tujuan": "Sumedang",
+        "jarak": 25,
+        "tarif": 1700,
+        "status": "tutup"
+    },
+    {
+        "kode": "T15",
+        "nama": "Tol Probolinggo Banyuwangi",
+        "awal": "Probolinggo",
+        "tujuan": "Banyuwangi",
+        "jarak": 172,
+        "tarif": 1600,
         "status": "tutup"
     }
 ]
