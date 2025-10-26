@@ -336,7 +336,7 @@ def menuAdmin(username):
 
                 print(table)
 
-            # 0. Logout
+            # 6. Logout
             elif adminInput == 6:
                 print("Log out admin...\n")
                 break
@@ -490,23 +490,22 @@ def menuUser(username):
             elif pilih == 5:
                 transaksi = load_json(transaksi_file)
 
-                if not transaksi:
-                    print("Belum ada data transaksi.")
-                    continue
-                    
-                table = PrettyTable(["No", "User", "Tol", "Golongan", "Jarak", "Total"])
+                my_transaksi = [t for t in transaksi if t["user"] == username]
 
-                for i, t in enumerate(transaksi, start=1):
+                if not my_transaksi:
+                    print("Anda belum memiliki data transaksi.")
+                    continue
+
+                table = PrettyTable(["No", "User", "Tol", "Golongan", "Jarak", "Total"])
+                for i, t in enumerate(my_transaksi, start=1):
                     table.add_row([i, t["user"], t["tol"], t["golongan"], t["jarak"], t["total"]])
 
                 print(table)
-
+                
+            # 6. Logout
             elif pilih == 6:
-                print("Log out user\n")
+                print("Log out user...\n")
                 break
-
-            else:
-                print("Pilihan tidak tersedia")
 
                 
         except KeyboardInterrupt:
