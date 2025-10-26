@@ -237,6 +237,9 @@ def menuAdmin(username):
             break
         except EOFError:
             print("Input tidak diterima")
+        except ValueError:
+            print("\nInput harus brupa angka\n")
+            continue
 
 
 # ================== MENU USER ==================
@@ -398,6 +401,9 @@ def menuUser(username):
             print("\nInput tidak diterima. Gunakan menu Logout")
         except EOFError:
             print("\nInput tidak diterima")
+        except ValueError:
+            print("\nInput harus brupa angka\n")
+            continue
 
 
 # === LOGIN SYSTEM ===
@@ -481,7 +487,9 @@ def login_system():
         except KeyboardInterrupt:
             print("\n💀 Program dihentikan paksa")
         except EOFError:
-            print("Input tidak diterima")
+            print("\nInput tidak diterima")
+        except ValueError:
+            print("\nInput harus berupa angka")
 
 # === Startup ===
 def start():
@@ -540,11 +548,13 @@ def start():
             print("\nKeyboardInterrupt terdeteksi. Kembali ke menu awal\n")
             continue
         except EOFError:
-            print("\n EOFError terdeteksi. Mohon ulangi lagi input\n")
+            print("\nEOFError terdeteksi. Mohon ulangi lagi input\n")
+            continue
+        except ValueError:
+            print("\nInput harus brupa angka\n")
             continue
 
 
 # === MAIN PROGRAM ===
 if __name__ == "__main__":
     start()
-    
