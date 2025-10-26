@@ -651,7 +651,7 @@ jika anda ingin melihat kemana tujuan anda pada tol anda bisa mengikuti cara ini
 jika anda tidak mempunyai saldo e toll anda bisa top up dengan cara ini
 - input angka 2 pada tampilan menu user 
 - menampilkan halaman top up
-- masukkan nominal top up ( min 1, max 2.000.000 )
+- masukkan nominal top up [min 1, max 2.000.000 ]
 - input harus berupa angka jika tidak akan kembali ke menu user
 - jika sudah maka, Top up berhasil!
 ---
@@ -664,12 +664,12 @@ jika anda lupa dengan saldo anda, anda bisa melihatnya denngan cara ini
 - input angka 3 pada tampilan menu user
 - kemudian sistem akan menampilkan saldo anda yang tersimpan di akun.json
 - Saldo Anda: Rp *****
-
+---
   <img width="313" height="194" alt="image" src="https://github.com/user-attachments/assets/8b8ef3f8-36c2-4e62-8c15-bc9506452da8" />
 
-  ---
+---
 ## 1️⃣ Menu 4 Sebagai user
-jika anda ingin membayar tol yang sudah anda lewati dengan cara ini
+jika anda ingin membayar tol yang sudah anda lewati, dengan cara ini :
 - input angka 4 pada tampilan menu user
 - sistem akan menampilkan daftar ruas jalan tol
 - masukkan no jalan tol yang anda lewati
@@ -678,4 +678,87 @@ jika anda ingin membayar tol yang sudah anda lewati dengan cara ini
 - jika sudah memasukkan golongan maka sistem akan melihat apakah saldo anda cukup
 - jika saldo tidak cukup maka akan menampilkan "Saldo idak cukup!"
 - jika saldo cukup maka akan "Pembayaran berhasil! Total: Rp *****"
-- 
+
+---
+## 1️⃣ Menu 5 Sebagai user
+
+---
+## 1️⃣ Menu 6 Sebagai user
+jika anda ingin keluar dari tampilan user anda, dengan cara ini :
+- input angka 6 pada tampilan menu user
+- sistem akan meng log out akun anda
+- dan akan menampilkan "Log out berhasil."
+- kembali ke menu DETOL
+---
+<img width="638" height="552" alt="Screenshot 2025-10-26 201019" src="https://github.com/user-attachments/assets/c6bd84e7-a70b-4956-81d4-fa3097d94afd" />
+
+---
+## 1️⃣ Login sebagai admin
+- input angka 1 pada tampilan menu DETOL
+- masukkan username "admin1"
+- masukkan password "1234"
+- maka akan menampilkan halaman admin
+---
+<img width="435" height="567" alt="image" src="https://github.com/user-attachments/assets/b00143dc-a697-4040-b05a-aff7cbecc4a1" />
+
+---
+## 1️⃣ menu 1 sebagai admin
+jika admin ingin melihat semua daftar jalan tol, dengan cara ini :
+- input angka 1 pada tampilan menu admin
+- sistem akan melihatkan daftar ruas jalan tol
+- admin dapat melihat seluruh jalan tol yang aktif maupun yang tutup
+---
+
+<img width="883" height="469" alt="image" src="https://github.com/user-attachments/assets/896e7807-b62c-4c97-ae8e-c25baeecbb6b" />
+
+---
+## 1️⃣ menu 2 sebagai admin
+jika admin ingin menambahkan ruas jalan tol baru, dengan cara ini :
+- input angka 2 pada tampilan menu admin
+- sistem akan menampilkan seluruh ruas jalan tol
+- masukkan kode jalan tol **[jika sama maka akan disuruh input ulang kode]** 
+- masukkan nama jalan tol
+- masukkan kota awal
+- masukkan kota tujuan
+- masukkan jarak(km) **[wajib angka jika tidak maka akan disuruh input ulang]** 
+- masukkan tarif/(km) **[wajib angka jika tidak maka akan disuruh input ulang]** 
+- masukkan status jalan **[wajib input aktif/tutup jika maka akan disuruh input ulang]** 
+- jika sudah semua di input sistem akan menampilkan "Data ruas jalan tol berhasil ditambahkan!"
+- untuk melihatnya bisa ke menu admin 1
+---
+<img width="900" height="622" alt="Screenshot 2025-10-26 202408" src="https://github.com/user-attachments/assets/cde37e15-020b-4386-b9b8-e794fbef4439" />
+
+<img width="861" height="519" alt="image" src="https://github.com/user-attachments/assets/15dab8c9-7f14-4eea-b23a-f91fda749acf" />
+
+---
+## 1️⃣ menu 3 sebagai admin
+jika admin ingin mengubah ruas jalan tol yang sudah ada, dengan cara ini :
+- input angka 3 pada tampilan menu admin
+- sistem akan menampilkan seluruh ruas jalan tol
+- masukkan no jalan tol yang ingin diubah [wajib ada di daftar jika tidak maka akan kembali ke menu admin]
+- masukkan nama baru
+- masukkan kota awal
+- masukkan kota tujuan
+- masukkan jarak(km) **[wajib angka jika tidak maka akan disuruh input ulang]** 
+- masukkan tarif/(km) **[wajib angka jika tidak maka akan disuruh input ulang]** 
+- masukkan status jalan **[wajib input aktif/tutup jika maka akan disuruh input ulang]** 
+- jika sudah memasukkan semua maka akan menampilkan "Data berhasil diperbarui!"
+---
+
+<img width="790" height="705" alt="image" src="https://github.com/user-attachments/assets/2aac53bb-fc5c-42eb-9cf1-517f6406a8e3" />
+
+---
+## 1️⃣ menu 4 sebagai admin
+jika admin ingin menghapus salah satu ruas jalan tol, dengan cara ini :
+- input angka 4 pada tampilan menu admin
+- sistem akan menampilkan no,kode dan nama jalan tol yang bisa dihapus
+- masukkan no jalan tol yang ingin dihapus 
+- jika no jalan tol tidak ada maka akan kembali ke menu admin
+- jika no jalan tol ada, maka sistem akan menghapus ruas jalan tol
+- dan menampilkan "Ruas '****' berhasil dihapus.
+---
+
+<img width="530" height="696" alt="image" src="https://github.com/user-attachments/assets/a8174b75-cccf-4c00-8032-e72e6ef0ee26" />
+
+---
+## 1️⃣ menu 4 sebagai admin
