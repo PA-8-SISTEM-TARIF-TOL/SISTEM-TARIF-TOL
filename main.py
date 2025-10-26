@@ -443,6 +443,7 @@ def login_system():
 
                 if attempts == 3:
                     print("Terlalu banyak percobaan. Kembali ke menu awal.")
+                    break
 
 
             # 2. Regist Akun
@@ -520,33 +521,6 @@ def start():
                 print("Program ditutup")
                 exit()
                 
-            elif option == 3:
-                print("[MOD]")
-                print("VIEW ALL JSON")
-
-                akun = load_json(akun_file)
-                tol = load_json(tol_file)
-                transaksi = load_json(transaksi_file)
-
-                tableA = PrettyTable(["No", "Username", "Password", "Role", "Saldo"])
-                for i, t in enumerate(akun, start=1):
-                    tableA.add_row([i, t["username"], t["password"], t["role"], t["saldo"]])
-                    
-                tableTol = PrettyTable(["No", "Kode", "Nama", "Awal", "Tujuan", "Jarak", "Tarif", "Status"])
-                for i, t in enumerate(tol, start=1):
-                    tableTol.add_row([i, t["kode"], t["nama"], t["awal"], t["tujuan"], t["jarak"], t["tarif"], t["status"]])
-                    
-                tableT = PrettyTable(["No", "User", "Tol", "Golongan", "Jarak", "Total"])
-                for i, t in enumerate(transaksi, start=1):
-                    tableT.add_row([i, t["user"], t["tol"], t["golongan"], t["jarak"], t["total"]])
-
-                print(tableA)
-                print(tableTol)
-                print(tableT)
-                
-            else:
-                print("Pilihan tidak valid! Coba lagi\n")
-
         except KeyboardInterrupt:
             print("\nKeyboardInterrupt terdeteksi. Kembali ke menu awal\n")
             continue
@@ -561,3 +535,4 @@ def start():
 # === MAIN PROGRAM ===
 if __name__ == "__main__":
     start()
+
