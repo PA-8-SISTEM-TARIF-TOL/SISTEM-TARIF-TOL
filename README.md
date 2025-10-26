@@ -522,6 +522,17 @@ def menuUser(username):
 def login_system():
     while True:
         try:
+            print("============================================")
+            print("[     _____  ______ _______ ____  _         ")
+            print("[    |  __ \|  ____|__   __/ __ \| |        ")
+            print("[    | |  | | |__     | | | |  | | |        ")
+            print("[    | |  | |  __|    | | | |  | | |        ")
+            print("[    | |__| | |____   | | | |__| | |____    ")
+            print("[    |_____/|______|  |_|  \____/|______|   ")
+            print("[                                           ")
+            print("============================================")
+            print("Dashboard E-Toll Transaksi Otomatis Langsung")
+            print("============================================")
             print("\n===================")
             print("   SISTEM E-TOLL   ")
             print("===================")
@@ -554,7 +565,8 @@ def login_system():
                         print(f"Username atau password salah! Percobaan ke {attempts}/3")
 
                 if attempts == 3:
-                    print("Terlalu banyak percobaan. Kembali ke menu awal.")
+                    print("Terlalu banyak percobaan salah. Program dihentikan")
+                    break
 
 
             # 2. Regist Akun
@@ -606,74 +618,64 @@ def login_system():
             print("\nInput harus berupa angka")
             continue
 
-# === Startup ===
-def start():
-    while True:
-        try:
-            print("============================================")
-            print("[     _____  ______ _______ ____  _         ")
-            print("[    |  __ \|  ____|__   __/ __ \| |        ")
-            print("[    | |  | | |__     | | | |  | | |        ")
-            print("[    | |  | |  __|    | | | |  | | |        ")
-            print("[    | |__| | |____   | | | |__| | |____    ")
-            print("[    |_____/|______|  |_|  \____/|______|   ")
-            print("[                                           ")
-            print("============================================")
-            print("Dashboard E-Toll Transaksi Otomatis Langsung")
-            print("============================================")
-            print("[1] Mulai Program")
-            print("[2] Tutup Program")
-
-            option = int(input(">>> "))
-
-            if option == 1:
-                login_system()
-            elif option == 2:
-                print("Program ditutup")
-                exit()
-                
-            elif option == 3:
-                print("[MOD]")
-                print("VIEW ALL JSON")
-
-                akun = load_json(akun_file)
-                tol = load_json(tol_file)
-                transaksi = load_json(transaksi_file)
-
-                tableA = PrettyTable(["No", "Username", "Password", "Role", "Saldo"])
-                for i, t in enumerate(akun, start=1):
-                    tableA.add_row([i, t["username"], t["password"], t["role"], t["saldo"]])
-                    
-                tableTol = PrettyTable(["No", "Kode", "Nama", "Awal", "Tujuan", "Jarak", "Tarif", "Status"])
-                for i, t in enumerate(tol, start=1):
-                    tableTol.add_row([i, t["kode"], t["nama"], t["awal"], t["tujuan"], t["jarak"], t["tarif"], t["status"]])
-                    
-                tableT = PrettyTable(["No", "User", "Tol", "Golongan", "Jarak", "Total"])
-                for i, t in enumerate(transaksi, start=1):
-                    tableT.add_row([i, t["user"], t["tol"], t["golongan"], t["jarak"], t["total"]])
-
-                print(tableA)
-                print(tableTol)
-                print(tableT)
-                
-            else:
-                print("Pilihan tidak valid! Coba lagi\n")
-
-        except KeyboardInterrupt:
-            print("\nKeyboardInterrupt terdeteksi. Kembali ke menu awal\n")
-            continue
-        except EOFError:
-            print("\nEOFError terdeteksi. Mohon ulangi lagi input\n")
-            continue
-        except ValueError:
-            print("\nInput harus brupa angka\n")
-            continue
-
-
 # === MAIN PROGRAM ===
 if __name__ == "__main__":
-    start()
+    login_system()
 ```
+# OUTPUT
 
+## 1️⃣ Regist Akun dan Login sebagai user
+=> jika anda belum mempunyai akun DETOL <br>
+=> Pilih menu 2 untuk melakukan regist akun terlebih dahulu <br>
+=> buat username baru<br>
+=> Buat password<br>
+=> Akun 'nama_akun' berhasil dibuat dan masuk dalam data akun.json <br>
+=> login dengan akun yang sudah dibuat kemudian menampilkan menu user<br>
 
+---
+<img width="865" height="906" alt="image" src="https://github.com/user-attachments/assets/5cb71072-c183-4cde-9bd5-8494dd220154" />
 
+---
+## 1️⃣ Menu 1 Sebagai user
+jika anda ingin melihat kemana tujuan anda pada tol anda bisa mengikuti cara ini
+- input angka 1 pada tampilan menu user
+- sistem akan melihatkan daftar ruas jalan tol
+- user dapat melihat jalan tol yang aktif saja
+
+---
+
+<img width="716" height="598" alt="image" src="https://github.com/user-attachments/assets/5941400c-a0d7-46f1-9aa1-c959441d9629" />
+
+---
+## 1️⃣ Menu 2 Sebagai user
+jika anda tidak mempunyai saldo e toll anda bisa top up dengan cara ini
+- input angka 2 pada tampilan menu user 
+- menampilkan halaman top up
+- masukkan nominal top up ( min 1, max 2.000.000 )
+- input harus berupa angka jika tidak akan kembali ke menu user
+- jika sudah maka, Top up berhasil!
+---
+
+<img width="657" height="857" alt="image" src="https://github.com/user-attachments/assets/a8c58908-a605-47dd-810f-70f39b87ed20" />
+
+---
+## 1️⃣ Menu 3 Sebagai user
+jika anda lupa dengan saldo anda, anda bisa melihatnya denngan cara ini
+- input angka 3 pada tampilan menu user
+- kemudian sistem akan menampilkan saldo anda yang tersimpan di akun.json
+- Saldo Anda: Rp *****
+
+  <img width="313" height="194" alt="image" src="https://github.com/user-attachments/assets/8b8ef3f8-36c2-4e62-8c15-bc9506452da8" />
+
+  ---
+## 1️⃣ Menu 4 Sebagai user
+jika anda ingin membayar tol yang sudah anda lewati dengan cara ini
+- input angka 4 pada tampilan menu user
+- sistem akan menampilkan daftar ruas jalan tol
+- masukkan no jalan tol yang anda lewati
+- kemudian masukkan golongan kendaraan yang anda gunakan 
+- beda golongan beda harga yang akan dibayar
+- jika sudah memasukkan golongan maka sistem akan melihat apakah saldo anda cukup
+- jika saldo tidak cukup maka akan menampilkan "Saldo idak cukup!"
+- jika saldo cukup maka akan "Pembayaran berhasil! Total: Rp *****"
+- 
