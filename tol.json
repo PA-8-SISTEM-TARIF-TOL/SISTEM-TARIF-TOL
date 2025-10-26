@@ -8,4 +8,13 @@
         "tarif": 1500,
         "status": "aktif"
     }
+    {
+        "kode": "T02",
+        "nama": "Tol citampi",
+        "awal": "samarinda",
+        "tujuan": "jakarta",
+        "jarak": 1500,
+        "tarif": 1000,
+        "status": "tutup"
+    }
 ]
