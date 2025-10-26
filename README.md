@@ -625,19 +625,19 @@ if __name__ == "__main__":
 # 📤 OUTPUT
 
 ## 👥 Regist Akun dan Login sebagai user
-=> jika anda belum mempunyai akun DETOL <br>
-=> Pilih menu 2 untuk melakukan regist akun terlebih dahulu <br>
-=> buat username baru<br>
-=> Buat password<br>
-=> Akun 'nama_akun' berhasil dibuat dan masuk dalam data akun.json <br>
-=> login dengan akun yang sudah dibuat kemudian menampilkan menu user<br>
+- jika anda belum mempunyai akun DETOL <br>
+- Pilih menu 2 untuk melakukan regist akun terlebih dahulu <br>
+- buat username baru<br>
+- Buat password<br>
+- Akun 'nama_akun' berhasil dibuat dan masuk dalam data akun.json <br>
+- login dengan akun yang sudah dibuat kemudian menampilkan menu user<br>
 
 ---
 <img width="865" height="906" alt="image" src="https://github.com/user-attachments/assets/5cb71072-c183-4cde-9bd5-8494dd220154" />
 
 ---
 ## 1️⃣ Menu 1 Sebagai user
-jika anda ingin melihat kemana tujuan anda pada tol anda bisa mengikuti cara ini
+jika anda ingin melihat kemana tujuan anda pada tol anda bisa mengikuti cara ini :
 - input angka 1 pada tampilan menu user
 - sistem akan melihatkan daftar ruas jalan tol
 - user dapat melihat jalan tol yang aktif saja
@@ -648,7 +648,7 @@ jika anda ingin melihat kemana tujuan anda pada tol anda bisa mengikuti cara ini
 
 ---
 ## 2️⃣ Menu 2 Sebagai user
-jika anda tidak mempunyai saldo e toll anda bisa top up dengan cara ini
+jika anda tidak mempunyai saldo e toll anda bisa top up dengan cara ini :
 - input angka 2 pada tampilan menu user 
 - menampilkan halaman top up
 - masukkan nominal top up [min 1, max 2.000.000 ]
@@ -660,7 +660,7 @@ jika anda tidak mempunyai saldo e toll anda bisa top up dengan cara ini
 
 ---
 ## 3️⃣ Menu 3 Sebagai user
-jika anda lupa dengan saldo anda, anda bisa melihatnya denngan cara ini
+jika anda lupa dengan saldo anda, anda bisa melihatnya denngan cara ini :
 - input angka 3 pada tampilan menu user
 - kemudian sistem akan menampilkan saldo anda yang tersimpan di akun.json
 - Saldo Anda: Rp *****
@@ -781,6 +781,35 @@ jika admin ingin keluar dari tampilan admin, dengan cara ini :
 
 ---
 ## 🐞 Error Handling
+Error handling pada program ini digunakan untuk mencegah program mengalami crash ketika terjadi kesalahan input atau gangguan dari pengguna.
+### ✅ 1. Penanganan Input Bukan Angka (`ValueError`)
+Digunakan ketika user memasukkan huruf atau simbol pada input yang seharusnya berupa angka. Program akan menampilkan pesan kesalahan tanpa berhenti secara tiba-tiba.
+### ✅ 2. Penanganan Penghentian Mendadak (`KeyboardInterrupt`)
+Ketika user menekan `Ctrl + C`, program menampilkan pesan yang sopan dan berhenti dengan aman.
+### ✅ 3. Penanganan Input Terputus (`EOFError`)
+Mencegah error ketika input kosong atau terputus, sehingga program tidak membeku.
+### ✅ 4. Validasi Input Kosong
+Program memastikan input tertentu (seperti nama, kode tol, kategori) tidak dalam keadaan kosong agar data tetap valid.
+### ✅ 5. Validasi Range Angka
+Mencegah input angka dengan nilai tidak logis, seperti jarak 0 atau negatif, tarif tidak valid, atau menu di luar pilihan.
+### ✅ 6. Batas Maksimal Top Up
+Program membatasi nominal top up agar tidak melebihi Rp 2.000.000 per transaksi, menyerupai sistem transaksi nyata.
+### ✅ 7. Validasi Status Tol
+Status hanya dapat berupa “aktif” atau “tutup”, sehingga tidak terjadi typo atau status tidak dikenal.
+### ✅ 8. Validasi Kode Tol Duplikat
+Mencegah kode jalan tol yang sama agar data tetap unik dan tidak membingungkan sistem.
+### ✅ 9. Batas Percobaan Login
+Pengguna hanya memiliki tiga kesempatan login untuk menjaga keamanan dan mencegah percobaan brute force.
+
+---
+## 📌 CONTOH
+---
+![WhatsApp Image 2025-10-26 at 21 36 50 (1)](https://github.com/user-attachments/assets/3a2c71c9-bd1e-45b8-bab6-efdf11fe688a)
+![WhatsApp Image 2025-10-26 at 21 36 50](https://github.com/user-attachments/assets/bb08190b-6a26-4b0b-840c-f65429bf9807)
+![WhatsApp Image 2025-10-26 at 21 36 49](https://github.com/user-attachments/assets/0b110e2e-d2fd-4b84-b498-9bd7e34a616f)
+
+---
+
 ## 📚 Kesimpulan
 ---
 
@@ -788,7 +817,7 @@ Secara keseluruhan, program pembayaran tol berbasis Python yang saya buat ini be
 
 ---
 <div align="center"> 
-  
+
   ## 🙏TERIMA KASIH🤝 <br>
   
   Kami mengucapkan terima kasih kepada Asisten Laboratorium Konsultan dan Asisten Laboratorium yang telah memberikan arahan serta bimbingan selama proses pembuatan program ini.  Semoga project ini dapat bermanfaat dan menjadi pengalaman pembelajaran yang berharga.
