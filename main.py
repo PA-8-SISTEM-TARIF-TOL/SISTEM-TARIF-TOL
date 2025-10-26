@@ -495,44 +495,8 @@ def login_system():
             print("\nInput harus berupa angka")
             continue
 
-# === Startup ===
-def start():
-    while True:
-        try:
-            print("============================================")
-            print("[     _____  ______ _______ ____  _         ")
-            print("[    |  __ \|  ____|__   __/ __ \| |        ")
-            print("[    | |  | | |__     | | | |  | | |        ")
-            print("[    | |  | |  __|    | | | |  | | |        ")
-            print("[    | |__| | |____   | | | |__| | |____    ")
-            print("[    |_____/|______|  |_|  \____/|______|   ")
-            print("[                                           ")
-            print("============================================")
-            print("Dashboard E-Toll Transaksi Otomatis Langsung")
-            print("============================================")
-            print("[1] Mulai Program")
-            print("[2] Tutup Program")
-
-            option = int(input(">>> "))
-
-            if option == 1:
-                login_system()
-            elif option == 2:
-                print("Program ditutup")
-                exit()
-                
-        except KeyboardInterrupt:
-            print("\nKeyboardInterrupt terdeteksi. Kembali ke menu awal\n")
-            continue
-        except EOFError:
-            print("\nEOFError terdeteksi. Mohon ulangi lagi input\n")
-            continue
-        except ValueError:
-            print("\nInput harus brupa angka\n")
-            continue
-
-
 # === MAIN PROGRAM ===
 if __name__ == "__main__":
-    start()
+    login_system()
+
 
