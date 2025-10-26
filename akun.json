@@ -6,6 +6,12 @@
         "saldo": 0
     },
     {
+        "username": "admin2",
+        "password": "2345",
+        "role": "admin",
+        "saldo": 0
+    },
+    {
         "username": "n00b",
         "password": "0000",
         "role": "user",
@@ -18,3 +24,4 @@
         "saldo": 100000
     }
 ]
+
