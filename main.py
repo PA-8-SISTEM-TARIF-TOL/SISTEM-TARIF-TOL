@@ -415,19 +415,29 @@ def login_system():
 
             # 1. Login
             if pilihan == 1:
-                username = input("Masukkan username: ")
-                password = pwinput.pwinput(prompt="Masukkan password: ")
-                akun = load_json(akun_file)
-                found = next((a for a in akun if a["username"] == username and a["password"] == password), None)
+                attempts = 0
+                while attempts < 3:
+                    username = input("Masukkan username: ")
+                    password = pwinput.pwinput(prompt="Masukkan password: ")
 
-                if found:
-                    print(f"\nHalo {username}, Anda login sebagai {found['role'].upper()}.")
-                    if found["role"] == "admin":
-                        menuAdmin(username)
+                    akun = load_json(akun_file)
+                    found = next((a for a in akun if a["username"] == username and a["password"] == password), None)
+
+                    if found:
+                        print(f"\nHalo {username}, Anda login sebagai {found['role'].upper()}.")
+                        if found["role"] == "admin":
+                            menuAdmin(username)
+                        else:
+                            menuUser(username)
+                        break
+
                     else:
-                        menuUser(username)
-                else:
-                    print("Username atau password salah!")
+                        attempts += 1
+                        print(f"Username atau password salah! Percobaan ke {attempts}/3")
+
+                if attempts == 3:
+                    print("Terlalu banyak percobaan. Kembali ke menu awal.")
+
 
             # 2. Regist Akun
             elif pilihan == 2:
@@ -537,3 +547,4 @@ def start():
 # === MAIN PROGRAM ===
 if __name__ == "__main__":
     start()
+    
