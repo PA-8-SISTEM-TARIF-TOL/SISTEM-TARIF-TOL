@@ -622,6 +622,14 @@ def login_system():
 if __name__ == "__main__":
     login_system()
 ```
+# ▶️ CARA MENJALANKAN
+1. Siapkan Python 3.8+
+2. Install dependensi
+   ```
+   pip install pwinput
+   pip install prettytable
+   ```
+
 # 📤 OUTPUT
 
 ## 👥 Regist Akun dan Login sebagai user
